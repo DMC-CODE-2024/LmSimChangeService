@@ -37,7 +37,7 @@ public class AppConfig {
     @Value("${simChangeDate.header.value}")
     String simChangeDateHeaderValue;
 
-    @Value("${alert.url}")
+    @Value("${eirs.alert.url}")
     String alertUrl;
 
     @Value("${move.file.path}")
