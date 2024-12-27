@@ -21,6 +21,7 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -118,8 +119,8 @@ public class FileService implements IFileService {
         try {
             logger.info("Getting the file size for file {}", file.toURI());
             Path pathFile = Paths.get(file.toURI());
-            return (long) Files.lines(pathFile).count();
-
+            var t = (long) Files.lines(pathFile).count();
+            return t == 0 ? 0 : t - 1;
         } catch (IOException e) {
             logger.warn("Not able to  get size of file :", e);
         }
@@ -130,7 +131,7 @@ public class FileService implements IFileService {
     public void moveFile(FileDto file, String moveFilePath) {
         try {
             logger.info("Moving File:{} to {}", file.getFileName(), moveFilePath);
-            Files.move(Paths.get(file.getFileName()), Paths.get(moveFilePath + "/" + file.getName()));
+            Files.move(Paths.get(file.getFileName()), Paths.get(moveFilePath + "/" + file.getName()), StandardCopyOption.REPLACE_EXISTING);
             logger.info("Moved File:{} to {}", file.getFileName(), moveFilePath);
         } catch (IOException e) {
             logger.warn("Not able to  move file :", e);
