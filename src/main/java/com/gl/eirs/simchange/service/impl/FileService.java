@@ -119,8 +119,7 @@ public class FileService implements IFileService {
         try {
             logger.info("Getting the file size for file {}", file.toURI());
             Path pathFile = Paths.get(file.toURI());
-            var t = (long) Files.lines(pathFile).count();
-            return t == 0 ? 0 : t - 1;
+            return (long) Files.lines(pathFile).count();
         } catch (IOException e) {
             logger.warn("Not able to  get size of file :", e);
         }
