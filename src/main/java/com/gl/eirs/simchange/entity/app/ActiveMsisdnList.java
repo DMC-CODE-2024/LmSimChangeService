@@ -23,12 +23,6 @@ public class ActiveMsisdnList {
     @Column(name = "msisdn")
      String msisdn;
 
-    @Column(name = "created_on")
-     Timestamp createdOn;
-
-    @Column(name = "modified_on")
-     Timestamp modifiedOn;
-
     @Column(name = "remark")
      String remarks;
 

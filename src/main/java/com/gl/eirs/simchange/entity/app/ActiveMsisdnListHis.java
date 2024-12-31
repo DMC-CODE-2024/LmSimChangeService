@@ -18,12 +18,6 @@ public class ActiveMsisdnListHis {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "created_on")
-    private Timestamp createdOn;
-
-    @Column(name = "modified_on")
-    private Timestamp modifiedOn;
-
     @Column(name = "msisdn")
     private String msisdn;
 
@@ -39,10 +33,7 @@ public class ActiveMsisdnListHis {
     @Column(name = "operator")
     private String operator;
 
-
     @Column(name = "activation_date")
     private String activationDate; // Initialize with current date
-
-
 
 }
