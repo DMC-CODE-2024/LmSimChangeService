@@ -21,14 +21,11 @@ public class ImeiList {
     @Column(name="gsma_status")
     String gsmaStatus;
 
-
     @Column(name="pairing_date")
     LocalDateTime pairingDate;
 
     @Column(name="record_time")
     LocalDateTime recordTime;
-
-
 
     @Column(name="msisdn")
     String msisdn;
@@ -51,7 +48,6 @@ public class ImeiList {
     @Column(name="expiry_date")
     LocalDateTime expiryDate;
 
-
     @Column(name="pair_mode")
     String pairMode;
 
@@ -59,10 +55,9 @@ public class ImeiList {
     String actualImei;
 
     @Column(name="txn_id")
-    String txn_id;
+    String txnId;
 
     @Column(name = "request_id")
-    String request_id;
-
+    String requestId;
 
 }

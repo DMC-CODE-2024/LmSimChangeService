@@ -28,6 +28,10 @@ public class ImeiListHisBuilder {
         imeiListHis.setAction(action);
         imeiListHis.setActualImei(imeiList.getActualImei());
         imeiListHis.setActionRemark(remarks);
+
+        imeiListHis.setTxnId(imeiList.getTxnId());
+        imeiListHis.setRequestId(imeiList.getRequestId());
+
         return imeiListHis;
     }
 }

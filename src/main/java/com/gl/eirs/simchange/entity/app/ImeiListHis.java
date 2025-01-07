@@ -39,8 +39,8 @@ public class ImeiListHis {
     @Column(name="created_on")
     Timestamp createdOn;
 
-   @Column(name="modified_on")
-    Timestamp modifiedOn;
+//   @Column(name="modified_on")
+//    Timestamp modifiedOn;
 
     @Column(name="operator")
     String operatorName;
@@ -58,10 +58,10 @@ public class ImeiListHis {
     String actualImei;
 
     @Column(name="txn_id")
-    String txn_id;
+    String txnId;
 
     @Column(name = "request_id")
-    String request_id;
+    String requestId;
 
     @Column(name = "action")
     String action;
