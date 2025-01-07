@@ -15,6 +15,12 @@ public class DuplicateDeviceDetail {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name="created_on")
+    String createdOn;
+
+    @Column(name="modified_on")
+    LocalDateTime modifiedOn;
+
     @Column(name="imsi")
     String imsi;
 
@@ -24,20 +30,12 @@ public class DuplicateDeviceDetail {
     @Column(name="imei")
     String imei;
 
-    @Column(name="created_on")
-    String createdOn;
-
-    @Column(name="modified_on")
-    LocalDateTime modifiedOn;
-
     @Column(name="file_name")
     String fileName;
 
     @Column(name="edr_time")
     String edrTime;
-
-
-
+    
     @Column(name="operator")
     String operator;
 
@@ -56,29 +54,29 @@ public class DuplicateDeviceDetail {
     @Column(name="transaction_id")
     String transactionId;
 
-    @Column(name="document_type1")
-    String documentType1;
-
-    @Column(name="document_type2")
-    String documentType2;
-
-    @Column(name="document_type3")
-    String documentType3;
-
-    @Column(name="document_type4")
-    String documentType4;
-
-    @Column(name="document_path1")
-    String documentPath1;
-
-    @Column(name="document_path2")
-    String documentPath2;
-
-    @Column(name="document_path3")
-    String documentPath3;
-
-    @Column(name="document_path4")
-    String documentPath4;
+//    @Column(name="document_type1")
+//    String documentType1;
+//
+//    @Column(name="document_type2")
+//    String documentType2;
+//
+//    @Column(name="document_type3")
+//    String documentType3;
+//
+//    @Column(name="document_type4")
+//    String documentType4;
+//
+//    @Column(name="document_path1")
+//    String documentPath1;
+//
+//    @Column(name="document_path2")
+//    String documentPath2;
+//
+//    @Column(name="document_path3")
+//    String documentPath3;
+//
+//    @Column(name="document_path4")
+  //  String documentPath4;
 
     @Column(name="reminder_status")
     String reminderStatus;
@@ -91,5 +89,18 @@ public class DuplicateDeviceDetail {
 
     @Column(name = "actual_imei")
     String actualImei;
+
+    @Column(name="redmine_tkt_id")
+    String redmineTktId;
+
+    @Column(name = "approve_remark")
+    String approveRemark;
+
+    @Column(name = "approve_transaction_id")
+    String approveTransactionId;
+
+
+
+
 }
 
