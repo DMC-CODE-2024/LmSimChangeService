@@ -21,12 +21,12 @@ public class DbConnectionChecker {
     public void checkAuditDbConnection(@Qualifier("auditDataSource") DataSource dataSource) {
         checkDbConnection(dataSource, "aud");
     }
-
     private void checkDbConnection(DataSource dataSource, String dbName) {
         try (Connection connection = dataSource.getConnection()) {
-            logger.info("Database connection for " + dbName + " is successful!");
-        } catch (SQLException e) {
+            logger.info("Database connection for " + dbName + " is successful!"+connection);
+        } catch (SQLException e) {  
             logger.error("alert1601: DB connection failed for " + dbName + " while getting DB configuration value");
         }
     }
 }
+

@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 public interface ActiveMsisdnListRepository extends JpaRepository<ActiveMsisdnList, Long> {
     ActiveMsisdnList findByImsi(String oldImsi);
-
-
-    void deleteByImsi(String imsi);
+//
+//
+//    void deleteByImsi(String imsi);
 }
